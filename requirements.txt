@@ -1,0 +1,6 @@
+verl
+vllm==0.6.3
+word2number==1.1
+sympy==1.12
+Pebble
+latex2sympy2==1.9.1

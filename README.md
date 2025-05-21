@@ -15,7 +15,7 @@ More detailed code and data for data construction and ablation analysis will be 
 ```shell
 git clone git@github.com:thu-coai/BARREL.git
 cd BARREL
-pip install -e .
+pip install -r requirements.txt
 ```
 
 ### Evaluation
