@@ -1,0 +1,38 @@
+# Method
+method: sft
+deepspeed: ./config/ds_config.json
+# Model hyperparameters
+model_name_or_path: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+# Dataset hyperparameters
+dataset: ../../data/training_data/sft_data/barrel_sft_llama
+overwrite_cache: true
+cutoff_len: 4096
+max_length: 4096
+max_input_length: 1024
+max_output_length: 2048
+# Training hyperparameters
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 2
+lr_scheduler_type: cosine
+warmup_steps: 0
+logging_steps: 1
+save_total_limit: 3
+learning_rate: 0.00001
+num_train_epochs: 2
+bf16: true
+plot_loss: true
+adam_beta1: 0.9
+adam_beta2: 0.95
+evaluation_strategy: "no"
+eval_accumulation_steps: 1
+save_strategy: 'epoch'
+save_only_model: true
+report_to: 'tensorboard'
+load_best_model_at_end: false
+remove_unused_columns: false
+half_precision_backend: 'auto'
+gradient_checkpointing: true
+logging_dir: ./log/barrel_sft_llama_DeepSeek-R1-Distill-Llama-8B_test
+save_steps: 1000
+output_dir: ./checkpoints/barrel_sft_llama_DeepSeek-R1-Distill-Llama-8B_test
+overwrite_output_dir: true

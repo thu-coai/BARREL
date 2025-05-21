@@ -1,0 +1,19 @@
+# hf data
+# *.parquet
+# input_prompts/
+# *.json
+
+tmp/ 
+log/ 
+# verl
+wandb/
+outputs/
+checkpoints/
+logs/
+models/
+
+# results
+gen_results/
+
+# __pycache__
+__pycache__/
