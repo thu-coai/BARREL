@@ -1,3 +1,0 @@
-[submodule "training_scripts/grpo_stage/verl"]
-	path = training_scripts/grpo_stage/verl
-	url = https://github.com/volcengine/verl
